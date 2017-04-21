@@ -1,0 +1,3283 @@
+<html><head></head><body><div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a href="https://github.com/jhipster/jhipster-uml">jhipster-uml (v2.0.3)</a>
+</h1>
+<h4>UML support for JHipster via XMI files</h4>
+<div class="apidocSectionDiv"><a href="#apidoc.tableOfContents" id="apidoc.tableOfContents"><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.jhipster-uml">module jhipster-uml</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jhipster-uml.abstract_mapped_types">
+            function <span class="apidocSignatureSpan">jhipster-uml.</span>abstract_mapped_types
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jhipster-uml.cassandra_types">
+            function <span class="apidocSignatureSpan">jhipster-uml.</span>cassandra_types
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jhipster-uml.createEntities">
+            function <span class="apidocSignatureSpan">jhipster-uml.</span>createEntities
+            <span class="apidocSignatureSpan">(parsedData, databaseTypes, options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jhipster-uml.createParser">
+            function <span class="apidocSignatureSpan">jhipster-uml.</span>createParser
+            <span class="apidocSignatureSpan">(args)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jhipster-uml.generateEntities">
+            function <span class="apidocSignatureSpan">jhipster-uml.</span>generateEntities
+            <span class="apidocSignatureSpan">(entitiesToGenerate, classes, entityNamesToGenerate, options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jhipster-uml.mongodb_types">
+            function <span class="apidocSignatureSpan">jhipster-uml.</span>mongodb_types
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jhipster-uml.sql_types">
+            function <span class="apidocSignatureSpan">jhipster-uml.</span>sql_types
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jhipster-uml.toJDL">
+            function <span class="apidocSignatureSpan">jhipster-uml.</span>toJDL
+            <span class="apidocSignatureSpan">(parsedData, options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jhipster-uml.toJDLString">
+            function <span class="apidocSignatureSpan">jhipster-uml.</span>toJDLString
+            <span class="apidocSignatureSpan">(parsedData, options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jhipster-uml.types">
+            function <span class="apidocSignatureSpan">jhipster-uml.</span>types
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">jhipster-uml.</span>Editors</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">jhipster-uml.</span>abstract_mapped_types.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">jhipster-uml.</span>association_helper</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">jhipster-uml.</span>cassandra_types.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">jhipster-uml.</span>class_helper</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">jhipster-uml.</span>comment_helper</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">jhipster-uml.</span>editor_detector</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">jhipster-uml.</span>entities_to_generate_handler</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">jhipster-uml.</span>entitiescreator</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">jhipster-uml.</span>entity_generator</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">jhipster-uml.</span>exception_factory</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">jhipster-uml.</span>file_writer</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">jhipster-uml.</span>genmymodel_parser</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">jhipster-uml.</span>jdl_exporter</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">jhipster-uml.</span>jhipster_option_helper</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">jhipster-uml.</span>jhipster_uml_utils</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">jhipster-uml.</span>jhipster_utils</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">jhipster-uml.</span>json_exporter</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">jhipster-uml.</span>modelio_parser</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">jhipster-uml.</span>mongodb_types.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">jhipster-uml.</span>object_helper</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">jhipster-uml.</span>object_utils</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">jhipster-uml.</span>parser_factory</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">jhipster-uml.</span>parser_helper</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">jhipster-uml.</span>question_asker</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">jhipster-uml.</span>sql_types.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">jhipster-uml.</span>types.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">jhipster-uml.</span>types_helper</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">jhipster-uml.</span>umldesigner_parser</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.jhipster-uml.abstract_mapped_types">module jhipster-uml.abstract_mapped_types</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jhipster-uml.abstract_mapped_types.abstract_mapped_types">
+            function <span class="apidocSignatureSpan">jhipster-uml.</span>abstract_mapped_types
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.jhipster-uml.abstract_mapped_types.prototype">module jhipster-uml.abstract_mapped_types.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jhipster-uml.abstract_mapped_types.prototype.constructor">
+            function <span class="apidocSignatureSpan">jhipster-uml.abstract_mapped_types.prototype.</span>constructor
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jhipster-uml.abstract_mapped_types.prototype.getTypes">
+            function <span class="apidocSignatureSpan">jhipster-uml.abstract_mapped_types.prototype.</span>getTypes
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jhipster-uml.abstract_mapped_types.prototype.getValidationsForType">
+            function <span class="apidocSignatureSpan">jhipster-uml.abstract_mapped_types.prototype.</span>getValidationsForType
+            <span class="apidocSignatureSpan">(type)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.jhipster-uml.association_helper">module jhipster-uml.association_helper</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jhipster-uml.association_helper.checkValidityOfAssociation">
+            function <span class="apidocSignatureSpan">jhipster-uml.association_helper.</span>checkValidityOfAssociation
+            <span class="apidocSignatureSpan">(association, sourceName, destinationName)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.jhipster-uml.cassandra_types">module jhipster-uml.cassandra_types</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jhipster-uml.cassandra_types.cassandra_types">
+            function <span class="apidocSignatureSpan">jhipster-uml.</span>cassandra_types
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.jhipster-uml.cassandra_types.prototype">module jhipster-uml.cassandra_types.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jhipster-uml.cassandra_types.prototype.constructor">
+            function <span class="apidocSignatureSpan">jhipster-uml.cassandra_types.prototype.</span>constructor
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jhipster-uml.cassandra_types.prototype.getName">
+            function <span class="apidocSignatureSpan">jhipster-uml.cassandra_types.prototype.</span>getName
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.jhipster-uml.class_helper">module jhipster-uml.class_helper</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jhipster-uml.class_helper.getClassNames">
+            function <span class="apidocSignatureSpan">jhipster-uml.class_helper.</span>getClassNames
+            <span class="apidocSignatureSpan">(classes)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.jhipster-uml.comment_helper">module jhipster-uml.comment_helper</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jhipster-uml.comment_helper.formatComment">
+            function <span class="apidocSignatureSpan">jhipster-uml.comment_helper.</span>formatComment
+            <span class="apidocSignatureSpan">(comment)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.jhipster-uml.editor_detector">module jhipster-uml.editor_detector</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jhipster-uml.editor_detector.detect">
+            function <span class="apidocSignatureSpan">jhipster-uml.editor_detector.</span>detect
+            <span class="apidocSignatureSpan">(root)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.jhipster-uml.entities_to_generate_handler">module jhipster-uml.entities_to_generate_handler</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jhipster-uml.entities_to_generate_handler.getEntitiesToGenerate">
+            function <span class="apidocSignatureSpan">jhipster-uml.entities_to_generate_handler.</span>getEntitiesToGenerate
+            <span class="apidocSignatureSpan">(entityNames)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.jhipster-uml.entitiescreator">module jhipster-uml.entitiescreator</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jhipster-uml.entitiescreator.createEntities">
+            function <span class="apidocSignatureSpan">jhipster-uml.entitiescreator.</span>createEntities
+            <span class="apidocSignatureSpan">(parsedData, databaseTypes, options)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.jhipster-uml.entity_generator">module jhipster-uml.entity_generator</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jhipster-uml.entity_generator.generateEntities">
+            function <span class="apidocSignatureSpan">jhipster-uml.entity_generator.</span>generateEntities
+            <span class="apidocSignatureSpan">(entitiesToGenerate, classes, entityNamesToGenerate, options)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.jhipster-uml.exception_factory">module jhipster-uml.exception_factory</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jhipster-uml.exception_factory.buildException">
+            function <span class="apidocSignatureSpan">jhipster-uml.exception_factory.</span>buildException
+            <span class="apidocSignatureSpan">(name, message)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">jhipster-uml.exception_factory.</span>exceptions</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.jhipster-uml.file_writer">module jhipster-uml.file_writer</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jhipster-uml.file_writer.writeFile">
+            function <span class="apidocSignatureSpan">jhipster-uml.file_writer.</span>writeFile
+            <span class="apidocSignatureSpan">(args)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.jhipster-uml.genmymodel_parser">module jhipster-uml.genmymodel_parser</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jhipster-uml.genmymodel_parser.parse">
+            function <span class="apidocSignatureSpan">jhipster-uml.genmymodel_parser.</span>parse
+            <span class="apidocSignatureSpan">(args)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.jhipster-uml.jdl_exporter">module jhipster-uml.jdl_exporter</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jhipster-uml.jdl_exporter.toJDL">
+            function <span class="apidocSignatureSpan">jhipster-uml.jdl_exporter.</span>toJDL
+            <span class="apidocSignatureSpan">(parsedData, options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jhipster-uml.jdl_exporter.toJDLString">
+            function <span class="apidocSignatureSpan">jhipster-uml.jdl_exporter.</span>toJDLString
+            <span class="apidocSignatureSpan">(parsedData, options)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.jhipster-uml.jhipster_option_helper">module jhipster-uml.jhipster_option_helper</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jhipster-uml.jhipster_option_helper.askForAngularSuffixes">
+            function <span class="apidocSignatureSpan">jhipster-uml.jhipster_option_helper.</span>askForAngularSuffixes
+            <span class="apidocSignatureSpan">(classes, values)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jhipster-uml.jhipster_option_helper.askForClassesToSkipClientCode">
+            function <span class="apidocSignatureSpan">jhipster-uml.jhipster_option_helper.</span>askForClassesToSkipClientCode
+            <span class="apidocSignatureSpan">(classes)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jhipster-uml.jhipster_option_helper.askForClassesToSkipServerCode">
+            function <span class="apidocSignatureSpan">jhipster-uml.jhipster_option_helper.</span>askForClassesToSkipServerCode
+            <span class="apidocSignatureSpan">(classes)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jhipster-uml.jhipster_option_helper.askForClassesWithNoFluentMethods">
+            function <span class="apidocSignatureSpan">jhipster-uml.jhipster_option_helper.</span>askForClassesWithNoFluentMethods
+            <span class="apidocSignatureSpan">(classes)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jhipster-uml.jhipster_option_helper.askForDTO">
+            function <span class="apidocSignatureSpan">jhipster-uml.jhipster_option_helper.</span>askForDTO
+            <span class="apidocSignatureSpan">(classes, values)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jhipster-uml.jhipster_option_helper.askForMicroserviceNames">
+            function <span class="apidocSignatureSpan">jhipster-uml.jhipster_option_helper.</span>askForMicroserviceNames
+            <span class="apidocSignatureSpan">(classes, values)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jhipster-uml.jhipster_option_helper.askForPagination">
+            function <span class="apidocSignatureSpan">jhipster-uml.jhipster_option_helper.</span>askForPagination
+            <span class="apidocSignatureSpan">(classes, values)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jhipster-uml.jhipster_option_helper.askForSearchEngines">
+            function <span class="apidocSignatureSpan">jhipster-uml.jhipster_option_helper.</span>askForSearchEngines
+            <span class="apidocSignatureSpan">(classes, values)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jhipster-uml.jhipster_option_helper.askForService">
+            function <span class="apidocSignatureSpan">jhipster-uml.jhipster_option_helper.</span>askForService
+            <span class="apidocSignatureSpan">(classes, values)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.jhipster-uml.jhipster_uml_utils">module jhipster-uml.jhipster_uml_utils</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jhipster-uml.jhipster_uml_utils.isJumlFilePresent">
+            function <span class="apidocSignatureSpan">jhipster-uml.jhipster_uml_utils.</span>isJumlFilePresent
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.jhipster-uml.jhipster_utils">module jhipster-uml.jhipster_utils</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jhipster-uml.jhipster_utils.checkForReservedClassName">
+            function <span class="apidocSignatureSpan">jhipster-uml.jhipster_utils.</span>checkForReservedClassName
+            <span class="apidocSignatureSpan">(args)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jhipster-uml.jhipster_utils.checkForReservedFieldName">
+            function <span class="apidocSignatureSpan">jhipster-uml.jhipster_utils.</span>checkForReservedFieldName
+            <span class="apidocSignatureSpan">(args)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jhipster-uml.jhipster_utils.checkForReservedTableName">
+            function <span class="apidocSignatureSpan">jhipster-uml.jhipster_utils.</span>checkForReservedTableName
+            <span class="apidocSignatureSpan">(args)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jhipster-uml.jhipster_utils.isYoRcFilePresent">
+            function <span class="apidocSignatureSpan">jhipster-uml.jhipster_utils.</span>isYoRcFilePresent
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jhipster-uml.jhipster_utils.readJSONFiles">
+            function <span class="apidocSignatureSpan">jhipster-uml.jhipster_utils.</span>readJSONFiles
+            <span class="apidocSignatureSpan">(entityNames)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.jhipster-uml.json_exporter">module jhipster-uml.json_exporter</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jhipster-uml.json_exporter.exportToJSON">
+            function <span class="apidocSignatureSpan">jhipster-uml.json_exporter.</span>exportToJSON
+            <span class="apidocSignatureSpan">(entities, entityIdsToGenerate, parsedData, entityNamesToGenerate)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.jhipster-uml.modelio_parser">module jhipster-uml.modelio_parser</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jhipster-uml.modelio_parser.parse">
+            function <span class="apidocSignatureSpan">jhipster-uml.modelio_parser.</span>parse
+            <span class="apidocSignatureSpan">(args)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.jhipster-uml.mongodb_types">module jhipster-uml.mongodb_types</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jhipster-uml.mongodb_types.mongodb_types">
+            function <span class="apidocSignatureSpan">jhipster-uml.</span>mongodb_types
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.jhipster-uml.mongodb_types.prototype">module jhipster-uml.mongodb_types.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jhipster-uml.mongodb_types.prototype.constructor">
+            function <span class="apidocSignatureSpan">jhipster-uml.mongodb_types.prototype.</span>constructor
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jhipster-uml.mongodb_types.prototype.getName">
+            function <span class="apidocSignatureSpan">jhipster-uml.mongodb_types.prototype.</span>getName
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.jhipster-uml.object_helper">module jhipster-uml.object_helper</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jhipster-uml.object_helper.areJHipsterEntitiesEqual">
+            function <span class="apidocSignatureSpan">jhipster-uml.object_helper.</span>areJHipsterEntitiesEqual
+            <span class="apidocSignatureSpan">(firstEntity, secondEntity)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.jhipster-uml.object_utils">module jhipster-uml.object_utils</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jhipster-uml.object_utils.merge">
+            function <span class="apidocSignatureSpan">jhipster-uml.object_utils.</span>merge
+            <span class="apidocSignatureSpan">(object1, object2)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jhipster-uml.object_utils.values">
+            function <span class="apidocSignatureSpan">jhipster-uml.object_utils.</span>values
+            <span class="apidocSignatureSpan">(object)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.jhipster-uml.parser_factory">module jhipster-uml.parser_factory</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jhipster-uml.parser_factory.createParser">
+            function <span class="apidocSignatureSpan">jhipster-uml.parser_factory.</span>createParser
+            <span class="apidocSignatureSpan">(args)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.jhipster-uml.parser_helper">module jhipster-uml.parser_helper</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jhipster-uml.parser_helper.extractClassName">
+            function <span class="apidocSignatureSpan">jhipster-uml.parser_helper.</span>extractClassName
+            <span class="apidocSignatureSpan">(name)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jhipster-uml.parser_helper.getTypeNameFromURL">
+            function <span class="apidocSignatureSpan">jhipster-uml.parser_helper.</span>getTypeNameFromURL
+            <span class="apidocSignatureSpan">(uri)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jhipster-uml.parser_helper.getXmlElementFromRawIndexes">
+            function <span class="apidocSignatureSpan">jhipster-uml.parser_helper.</span>getXmlElementFromRawIndexes
+            <span class="apidocSignatureSpan">(root, indexInfo)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jhipster-uml.parser_helper.isAnId">
+            function <span class="apidocSignatureSpan">jhipster-uml.parser_helper.</span>isAnId
+            <span class="apidocSignatureSpan">(name)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.jhipster-uml.question_asker">module jhipster-uml.question_asker</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jhipster-uml.question_asker.askConfirmation">
+            function <span class="apidocSignatureSpan">jhipster-uml.question_asker.</span>askConfirmation
+            <span class="apidocSignatureSpan">(args)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jhipster-uml.question_asker.askForInput">
+            function <span class="apidocSignatureSpan">jhipster-uml.question_asker.</span>askForInput
+            <span class="apidocSignatureSpan">(args)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jhipster-uml.question_asker.selectMultipleChoices">
+            function <span class="apidocSignatureSpan">jhipster-uml.question_asker.</span>selectMultipleChoices
+            <span class="apidocSignatureSpan">(args)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jhipster-uml.question_asker.selectSingleChoice">
+            function <span class="apidocSignatureSpan">jhipster-uml.question_asker.</span>selectSingleChoice
+            <span class="apidocSignatureSpan">(args)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.jhipster-uml.sql_types">module jhipster-uml.sql_types</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jhipster-uml.sql_types.sql_types">
+            function <span class="apidocSignatureSpan">jhipster-uml.</span>sql_types
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.jhipster-uml.sql_types.prototype">module jhipster-uml.sql_types.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jhipster-uml.sql_types.prototype.constructor">
+            function <span class="apidocSignatureSpan">jhipster-uml.sql_types.prototype.</span>constructor
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jhipster-uml.sql_types.prototype.getName">
+            function <span class="apidocSignatureSpan">jhipster-uml.sql_types.prototype.</span>getName
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.jhipster-uml.types">module jhipster-uml.types</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jhipster-uml.types.types">
+            function <span class="apidocSignatureSpan">jhipster-uml.</span>types
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.jhipster-uml.types.prototype">module jhipster-uml.types.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jhipster-uml.types.prototype.contains">
+            function <span class="apidocSignatureSpan">jhipster-uml.types.prototype.</span>contains
+            <span class="apidocSignatureSpan">(type)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jhipster-uml.types.prototype.getName">
+            function <span class="apidocSignatureSpan">jhipster-uml.types.prototype.</span>getName
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jhipster-uml.types.prototype.getTypes">
+            function <span class="apidocSignatureSpan">jhipster-uml.types.prototype.</span>getTypes
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jhipster-uml.types.prototype.getValidationsForType">
+            function <span class="apidocSignatureSpan">jhipster-uml.types.prototype.</span>getValidationsForType
+            <span class="apidocSignatureSpan">(type)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jhipster-uml.types.prototype.isValidationSupportedForType">
+            function <span class="apidocSignatureSpan">jhipster-uml.types.prototype.</span>isValidationSupportedForType
+            <span class="apidocSignatureSpan">(type, validation)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jhipster-uml.types.prototype.toValueNameObjectArray">
+            function <span class="apidocSignatureSpan">jhipster-uml.types.prototype.</span>toValueNameObjectArray
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.jhipster-uml.types_helper">module jhipster-uml.types_helper</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jhipster-uml.types_helper.isNoSQL">
+            function <span class="apidocSignatureSpan">jhipster-uml.types_helper.</span>isNoSQL
+            <span class="apidocSignatureSpan">(type)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.jhipster-uml.umldesigner_parser">module jhipster-uml.umldesigner_parser</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jhipster-uml.umldesigner_parser.parse">
+            function <span class="apidocSignatureSpan">jhipster-uml.umldesigner_parser.</span>parse
+            <span class="apidocSignatureSpan">(args)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.jhipster-uml" id="apidoc.module.jhipster-uml">module jhipster-uml</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.jhipster-uml.abstract_mapped_types" id="apidoc.element.jhipster-uml.abstract_mapped_types">
+        function <span class="apidocSignatureSpan">jhipster-uml.</span>abstract_mapped_types
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">abstract_mapped_types = function () {
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.jhipster-uml.cassandra_types" id="apidoc.element.jhipster-uml.cassandra_types">
+        function <span class="apidocSignatureSpan">jhipster-uml.</span>cassandra_types
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">cassandra_types = function () {
+  this.types = {
+    UUID: ['required'],
+    String: ['required', 'minlength', 'maxlength', 'pattern'],
+    Integer: ['required', 'min', 'max'],
+    Long: ['required', 'min', 'max'],
+    BigDecimal: ['required', 'min', 'max'],
+    Date: ['required'],
+    Boolean: ['required'],
+    Float: ['required', 'min', 'max'],
+    Double: ['required', 'min', 'max']
+  };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.jhipster-uml.createEntities" id="apidoc.element.jhipster-uml.createEntities">
+        function <span class="apidocSignatureSpan">jhipster-uml.</span>createEntities
+        <span class="apidocSignatureSpan">(parsedData, databaseTypes, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function createEntities(parsedData, databaseTypes, options) {
+  var merged = merge(defaults(), options);
+  if (!parsedData || !databaseTypes) {
+    throw new buildException(
+        exceptions.NullPointer,
+        'The parsed data and database types are mandatory.');
+  }
+  init(merged, parsedData, databaseTypes);
+  checkNoSQLModeling();
+  onDiskEntities = readJSONFiles(parsedData.classNames);
+  initializeEntities();
+  fillEntities();
+  return entities;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.jhipster-uml.createParser" id="apidoc.element.jhipster-uml.createParser">
+        function <span class="apidocSignatureSpan">jhipster-uml.</span>createParser
+        <span class="apidocSignatureSpan">(args)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function createParser(args) {
+  if (!args || !args.file || !args.databaseType) {
+    throw new buildException(
+        exceptions.IllegalArgument,
+        'The file and the database type must be passed');
+  }
+  var types = initDatabaseTypeHolder(args.databaseType);
+  return getParserForSingleFile(args.file, types, args.noUserManagement);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.jhipster-uml.generateEntities" id="apidoc.element.jhipster-uml.generateEntities">
+        function <span class="apidocSignatureSpan">jhipster-uml.</span>generateEntities
+        <span class="apidocSignatureSpan">(entitiesToGenerate, classes, entityNamesToGenerate, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function generateEntities(entitiesToGenerate, classes, entityNamesToGenerate, options) {
+  if (entitiesToGenerate.length === 0 || entityNamesToGenerate.length === 0
+      || classes.length === 0) {
+    console.info('No entity has to be generated.');
+    return;
+  }
+
+  displayEntitiesToGenerate(entityNamesToGenerate, entitiesToGenerate, classes);
+
+  for (let i = 0; i &lt; entitiesToGenerate.length; i ++) {
+    if (entityNamesToGenerate.indexOf(classes[entitiesToGenerate[i]].name) === -1) {
+      continue;
+    }
+    let builder = new JHipsterCommandBuilder()
+      .className(classes[entitiesToGenerate[i]].name);
+    if (options.force) {
+      builder.force();
+    }
+    if (options.listOfNoClient.indexOf(classes[entitiesToGenerate[i]].name) !== -1) {
+      builder.skipClient();
+    }
+    if (options.listOfNoServer.indexOf(classes[entitiesToGenerate[i]].name) !== -1) {
+      builder.skipServer();
+    }
+    if (options.noFluentMethods.indexOf(classes[entitiesToGenerate[i]].name) !== -1) {
+      builder.noFluentMethods();
+    }
+    if (options.angularSuffixes[classes[entitiesToGenerate[i]].name]) {
+      builder.angularSuffix(`${angularSuffixes[classes[entitiesToGenerate[i]].name]}`);
+    }
+    if (options.noUserManagement) {
+      builder.skipUserManagement();
+    }
+    // Run gulp inject just at the end to speed entity creation
+    if (i !== entitiesToGenerate.length - 1) {
+      builder.skipInstall();
+    }
+    let built = builder.build();
+    child_process.spawnSync(
+      built.command,
+      built.args,
+      { stdio: built.stdio }
+    );
+    console.info('\n');
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.jhipster-uml.mongodb_types" id="apidoc.element.jhipster-uml.mongodb_types">
+        function <span class="apidocSignatureSpan">jhipster-uml.</span>mongodb_types
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">mongodb_types = function () {
+  this.types = {
+    String: ['required', 'minlength', 'maxlength', 'pattern'],
+    Integer: ['required', 'min', 'max'],
+    Long: ['required', 'min', 'max'],
+    BigDecimal: ['required', 'min', 'max'],
+    LocalDate: ['required'],
+    ZonedDateTime: ['required'],
+    Boolean: ['required'],
+    Enum: ['required'],
+    Blob: ['required', 'minbytes', 'maxbytes'],
+    AnyBlob: ['required', 'minbytes', 'maxbytes'],
+    ImageBlob: ['required', 'minbytes', 'maxbytes'],
+    TextBlob: ['required', 'minbytes', 'maxbytes'],
+    Float: ['required', 'min', 'max'],
+    Double: ['required', 'min', 'max']
+  };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.jhipster-uml.sql_types" id="apidoc.element.jhipster-uml.sql_types">
+        function <span class="apidocSignatureSpan">jhipster-uml.</span>sql_types
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">sql_types = function () {
+  this.types = {
+    String: ['required', 'minlength', 'maxlength', 'pattern'],
+    Integer: ['required', 'min', 'max'],
+    Long: ['required', 'min', 'max'],
+    BigDecimal: ['required', 'min', 'max'],
+    LocalDate: ['required'],
+    ZonedDateTime: ['required'],
+    Boolean: ['required'],
+    Enum: ['required'],
+    Blob: ['required', 'minbytes', 'maxbytes'],
+    AnyBlob: ['required', 'minbytes', 'maxbytes'],
+    ImageBlob: ['required', 'minbytes', 'maxbytes'],
+    TextBlob: ['required', 'minbytes', 'maxbytes'],
+    Float: ['required', 'min', 'max'],
+    Double: ['required', 'min', 'max']
+  };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.jhipster-uml.toJDL" id="apidoc.element.jhipster-uml.toJDL">
+        function <span class="apidocSignatureSpan">jhipster-uml.</span>toJDL
+        <span class="apidocSignatureSpan">(parsedData, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function toJDL(parsedData, options) {
+  if (!parsedData) {
+    throw new buildException(
+        exceptions.NullPointer,
+        'The parsed data must be passed');
+  }
+  var jdlObject = new JDLObject();
+  var jdlEntityObject = convertClasses(parsedData);
+  addEntitiesToJDLObject(jdlObject, jdlEntityObject);
+  var jdlRelationshipArray = convertAssociations(parsedData.associations, jdlObject.entities, parsedData.classes);
+  addRelationshipsToJDLObject(jdlObject, jdlRelationshipArray);
+  var jdlEnumArray = convertEnums(parsedData.enums);
+  addEnumsToJDLObject(jdlObject, jdlEnumArray);
+  if (options) {
+    var jdlOptionArray = convertOptions(options, parsedData.classNames.length);
+    addOptionsToJDLObject(jdlObject, jdlOptionArray);
+  }
+  return jdlObject;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.jhipster-uml.toJDLString" id="apidoc.element.jhipster-uml.toJDLString">
+        function <span class="apidocSignatureSpan">jhipster-uml.</span>toJDLString
+        <span class="apidocSignatureSpan">(parsedData, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function toJDLString(parsedData, options) {
+  return toJDL(parsedData, options).toString();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.jhipster-uml.types" id="apidoc.element.jhipster-uml.types">
+        function <span class="apidocSignatureSpan">jhipster-uml.</span>types
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">types = function () {
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.jhipster-uml.abstract_mapped_types" id="apidoc.module.jhipster-uml.abstract_mapped_types">module jhipster-uml.abstract_mapped_types</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.jhipster-uml.abstract_mapped_types.abstract_mapped_types" id="apidoc.element.jhipster-uml.abstract_mapped_types.abstract_mapped_types">
+        function <span class="apidocSignatureSpan">jhipster-uml.</span>abstract_mapped_types
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">abstract_mapped_types = function () {
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.jhipster-uml.abstract_mapped_types.prototype" id="apidoc.module.jhipster-uml.abstract_mapped_types.prototype">module jhipster-uml.abstract_mapped_types.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.jhipster-uml.abstract_mapped_types.prototype.constructor" id="apidoc.element.jhipster-uml.abstract_mapped_types.prototype.constructor">
+        function <span class="apidocSignatureSpan">jhipster-uml.abstract_mapped_types.prototype.</span>constructor
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">constructor = function () {
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.jhipster-uml.abstract_mapped_types.prototype.getTypes" id="apidoc.element.jhipster-uml.abstract_mapped_types.prototype.getTypes">
+        function <span class="apidocSignatureSpan">jhipster-uml.abstract_mapped_types.prototype.</span>getTypes
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getTypes = function () {
+  return Object.keys(this.types);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+ * Each element is an Object which has a name, and a value.
+ * By default, the name and the value keys have the same value:
+ * [ { name: '1', value: '1' }, { name: '2', value: '2' }, ... ]
+ * @return {Array} the new array.
+ */
+Types.prototype.toValueNameObjectArray = function () {
+var array = [];
+for (let key in this.<span class="apidocCodeKeywordSpan">getTypes</span>()) {
+  if (this.getTypes().hasOwnProperty(key)) {
+    let object = {
+      value: this.getTypes()[key],
+      name: this.getTypes()[key]
+    };
+    array.push(object);
+  }
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.jhipster-uml.abstract_mapped_types.prototype.getValidationsForType" id="apidoc.element.jhipster-uml.abstract_mapped_types.prototype.getValidationsForType">
+        function <span class="apidocSignatureSpan">jhipster-uml.abstract_mapped_types.prototype.</span>getValidationsForType
+        <span class="apidocSignatureSpan">(type)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getValidationsForType = function (type) {
+  if (!this.contains(type)) {
+    throw new buildException(
+        exceptions.WrongDatabaseType,
+        `The passed type '${type}' is not supported.`);
+  }
+  return this.types[type];
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+ * Checks whether the type possesses the also passed validation.
+ * @param type {string} the type.
+ * @param validation {string} the validation to check.
+ * @return {boolean} whether the type is validated by the validation.
+ * @throws NoElementFoundException if no type exists for the passed type.
+ */
+Types.prototype.isValidationSupportedForType = function (type, validation) {
+  return this.<span class="apidocCodeKeywordSpan">getValidationsForType</span>(type).indexOf(validation) !== -1;
+};
+
+Types.prototype.getName = function () {
+  throw new buildException(
+      exceptions.UnimplementedOperation,
+      'This method must be implemented by a subclass to be called.');
+};
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.jhipster-uml.association_helper" id="apidoc.module.jhipster-uml.association_helper">module jhipster-uml.association_helper</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.jhipster-uml.association_helper.checkValidityOfAssociation" id="apidoc.element.jhipster-uml.association_helper.checkValidityOfAssociation">
+        function <span class="apidocSignatureSpan">jhipster-uml.association_helper.</span>checkValidityOfAssociation
+        <span class="apidocSignatureSpan">(association, sourceName, destinationName)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function checkValidityOfAssociation(association, sourceName, destinationName) {
+  if (!association || !association.type) {
+    throw new buildException(
+        exceptions.NullPointer, 'The association must not be nil.');
+  }
+  switch (association.type) {
+  case cardinalities.ONE_TO_ONE:
+    checkOneToOne(association, sourceName, destinationName);
+    break;
+  case cardinalities.ONE_TO_MANY:
+    checkOneToMany(association, sourceName, destinationName);
+    break;
+  case cardinalities.MANY_TO_ONE:
+    checkManyToOne(association, sourceName, destinationName);
+    break;
+  case cardinalities.MANY_TO_MANY:
+    checkManyToMany(association, sourceName, destinationName);
+    break;
+  default:
+    throw new buildException(
+        exceptions.WrongAssociation,
+        `The association type ${association.type} isn't supported.`);
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.jhipster-uml.cassandra_types" id="apidoc.module.jhipster-uml.cassandra_types">module jhipster-uml.cassandra_types</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.jhipster-uml.cassandra_types.cassandra_types" id="apidoc.element.jhipster-uml.cassandra_types.cassandra_types">
+        function <span class="apidocSignatureSpan">jhipster-uml.</span>cassandra_types
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">cassandra_types = function () {
+  this.types = {
+    UUID: ['required'],
+    String: ['required', 'minlength', 'maxlength', 'pattern'],
+    Integer: ['required', 'min', 'max'],
+    Long: ['required', 'min', 'max'],
+    BigDecimal: ['required', 'min', 'max'],
+    Date: ['required'],
+    Boolean: ['required'],
+    Float: ['required', 'min', 'max'],
+    Double: ['required', 'min', 'max']
+  };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.jhipster-uml.cassandra_types.prototype" id="apidoc.module.jhipster-uml.cassandra_types.prototype">module jhipster-uml.cassandra_types.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.jhipster-uml.cassandra_types.prototype.constructor" id="apidoc.element.jhipster-uml.cassandra_types.prototype.constructor">
+        function <span class="apidocSignatureSpan">jhipster-uml.cassandra_types.prototype.</span>constructor
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">constructor = function () {
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.jhipster-uml.cassandra_types.prototype.getName" id="apidoc.element.jhipster-uml.cassandra_types.prototype.getName">
+        function <span class="apidocSignatureSpan">jhipster-uml.cassandra_types.prototype.</span>getName
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getName = function () {
+  return cassandra;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  name: classData.name,
+  shouldThrow: true
+});
+if (classData.tableName.toLowerCase() !== 'user'
+    || (classData.tableName.toLowerCase() === 'user' &amp;&amp; !noUserManagement)) {
+  checkForReservedTableName({
+    name: classData.tableName,
+    databaseTypeName: databaseTypes.<span class="apidocCodeKeywordSpan">getName</span>(),
+    shouldThrow: true
+  });
+}
+if (element.eAnnotations &amp;&amp; element.eAnnotations[0].details
+    &amp;&amp; element.eAnnotations[0].details.length &gt; 1
+    &amp;&amp; element.eAnnotations[0].details[1].$.key === 'gmm-documentation') {
+  classData.comment = element.eAnnotations[0].details[1].$.value;
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.jhipster-uml.class_helper" id="apidoc.module.jhipster-uml.class_helper">module jhipster-uml.class_helper</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.jhipster-uml.class_helper.getClassNames" id="apidoc.element.jhipster-uml.class_helper.getClassNames">
+        function <span class="apidocSignatureSpan">jhipster-uml.class_helper.</span>getClassNames
+        <span class="apidocSignatureSpan">(classes)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function getClassNames(classes) {
+  if (!classes) {
+    throw new buildException(
+        exceptions.NullPointer, 'The classes object cannot be nil.');
+  }
+  var object = {};
+  Object.keys(classes).forEach(function (classId) {
+    object[classId] = classes[classId].name;
+  });
+  return object;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.jhipster-uml.comment_helper" id="apidoc.module.jhipster-uml.comment_helper">module jhipster-uml.comment_helper</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.jhipster-uml.comment_helper.formatComment" id="apidoc.element.jhipster-uml.comment_helper.formatComment">
+        function <span class="apidocSignatureSpan">jhipster-uml.comment_helper.</span>formatComment
+        <span class="apidocSignatureSpan">(comment)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function formatComment(comment) {
+  if (!comment) {
+    return;
+  }
+  var parts = comment.trim().split('\n');
+  if (parts.length === 1 &amp;&amp; parts[0].indexOf('*') !== 0) {
+    return parts[0];
+  }
+  return parts.reduce(function(previousValue, currentValue) {
+    return previousValue.concat(currentValue.trim().replace(/[*]*\s*/, ''));
+  }, '');
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.jhipster-uml.editor_detector" id="apidoc.module.jhipster-uml.editor_detector">module jhipster-uml.editor_detector</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.jhipster-uml.editor_detector.detect" id="apidoc.element.jhipster-uml.editor_detector.detect">
+        function <span class="apidocSignatureSpan">jhipster-uml.editor_detector.</span>detect
+        <span class="apidocSignatureSpan">(root)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function detect(root) {
+  if (!root) {
+    throw new buildException(
+        exceptions.NullPointer, 'The root element can not be null.');
+  }
+  if (root.eAnnotations &amp;&amp; root.eAnnotations[0].$.source === 'Objing') {
+    console.info('Parser detected: MODELIO.\n');
+    return modelio;
+  } else if (root.eAnnotations
+      &amp;&amp; root.eAnnotations[0].$.source === 'genmymodel') {
+    console.info('Parser detected: GENMYMODEL.\n');
+    return genmymodel;
+  }
+
+  if (UndetectedEditors.length === 0) {
+    // this should not be happening
+    throw new buildException(exceptions.UndetectedEditor,
+        'Your editor has not been detected, and this should not be happening.'
+        + '\nPlease report this issue by mentioning what your editor is.');
+  }
+  return askForEditor();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+function getParserForSingleFile(file, types, noUserManagement) {
+return getXMIFileParser(file, types, noUserManagement);
+}
+
+function getXMIFileParser(file, databaseType, noUserManagement) {
+var root = getRootElement(readFileContent(file));
+var detectedEditor = EditorDetector.<span class="apidocCodeKeywordSpan">detect</span>(root);
+return {
+  parser: Editors.Parsers[detectedEditor],
+  data: {
+    root: root,
+    databaseTypes: databaseType,
+    noUserManagement: noUserManagement
+  }
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.jhipster-uml.entities_to_generate_handler" id="apidoc.module.jhipster-uml.entities_to_generate_handler">module jhipster-uml.entities_to_generate_handler</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.jhipster-uml.entities_to_generate_handler.getEntitiesToGenerate" id="apidoc.element.jhipster-uml.entities_to_generate_handler.getEntitiesToGenerate">
+        function <span class="apidocSignatureSpan">jhipster-uml.entities_to_generate_handler.</span>getEntitiesToGenerate
+        <span class="apidocSignatureSpan">(entityNames)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function getEntitiesToGenerate(entityNames) {
+  console.log(`The following ${entityNames.length === 1 ? 'class has' : 'classes have'} changed: ${entityNames.join(', ')}.`);
+  if (entityNames.length === 1) {
+    return askConfirmation({question: `Generate ${entityNames[0]}?`, defaultValue: true})
+      ? entityNames
+      : [];
+  }
+  var choices = getChoices(entityNames);
+  return selectMultipleChoices({
+    choices: choices,
+    question: 'Select the entities to override.'
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.jhipster-uml.entitiescreator" id="apidoc.module.jhipster-uml.entitiescreator">module jhipster-uml.entitiescreator</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.jhipster-uml.entitiescreator.createEntities" id="apidoc.element.jhipster-uml.entitiescreator.createEntities">
+        function <span class="apidocSignatureSpan">jhipster-uml.entitiescreator.</span>createEntities
+        <span class="apidocSignatureSpan">(parsedData, databaseTypes, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function createEntities(parsedData, databaseTypes, options) {
+  var merged = merge(defaults(), options);
+  if (!parsedData || !databaseTypes) {
+    throw new buildException(
+        exceptions.NullPointer,
+        'The parsed data and database types are mandatory.');
+  }
+  init(merged, parsedData, databaseTypes);
+  checkNoSQLModeling();
+  onDiskEntities = readJSONFiles(parsedData.classNames);
+  initializeEntities();
+  fillEntities();
+  return entities;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.jhipster-uml.entity_generator" id="apidoc.module.jhipster-uml.entity_generator">module jhipster-uml.entity_generator</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.jhipster-uml.entity_generator.generateEntities" id="apidoc.element.jhipster-uml.entity_generator.generateEntities">
+        function <span class="apidocSignatureSpan">jhipster-uml.entity_generator.</span>generateEntities
+        <span class="apidocSignatureSpan">(entitiesToGenerate, classes, entityNamesToGenerate, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function generateEntities(entitiesToGenerate, classes, entityNamesToGenerate, options) {
+  if (entitiesToGenerate.length === 0 || entityNamesToGenerate.length === 0
+      || classes.length === 0) {
+    console.info('No entity has to be generated.');
+    return;
+  }
+
+  displayEntitiesToGenerate(entityNamesToGenerate, entitiesToGenerate, classes);
+
+  for (let i = 0; i &lt; entitiesToGenerate.length; i ++) {
+    if (entityNamesToGenerate.indexOf(classes[entitiesToGenerate[i]].name) === -1) {
+      continue;
+    }
+    let builder = new JHipsterCommandBuilder()
+      .className(classes[entitiesToGenerate[i]].name);
+    if (options.force) {
+      builder.force();
+    }
+    if (options.listOfNoClient.indexOf(classes[entitiesToGenerate[i]].name) !== -1) {
+      builder.skipClient();
+    }
+    if (options.listOfNoServer.indexOf(classes[entitiesToGenerate[i]].name) !== -1) {
+      builder.skipServer();
+    }
+    if (options.noFluentMethods.indexOf(classes[entitiesToGenerate[i]].name) !== -1) {
+      builder.noFluentMethods();
+    }
+    if (options.angularSuffixes[classes[entitiesToGenerate[i]].name]) {
+      builder.angularSuffix(`${angularSuffixes[classes[entitiesToGenerate[i]].name]}`);
+    }
+    if (options.noUserManagement) {
+      builder.skipUserManagement();
+    }
+    // Run gulp inject just at the end to speed entity creation
+    if (i !== entitiesToGenerate.length - 1) {
+      builder.skipInstall();
+    }
+    let built = builder.build();
+    child_process.spawnSync(
+      built.command,
+      built.args,
+      { stdio: built.stdio }
+    );
+    console.info('\n');
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.jhipster-uml.exception_factory" id="apidoc.module.jhipster-uml.exception_factory">module jhipster-uml.exception_factory</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.jhipster-uml.exception_factory.buildException" id="apidoc.element.jhipster-uml.exception_factory.buildException">
+        function <span class="apidocSignatureSpan">jhipster-uml.exception_factory.</span>buildException
+        <span class="apidocSignatureSpan">(name, message)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function buildException(name, message) {
+  var exception = {
+    name: name ? `${name}Exception` : 'Exception',
+    message: (message || '')
+  };
+  exception.prototype = new Error();
+  return exception;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.jhipster-uml.file_writer" id="apidoc.module.jhipster-uml.file_writer">module jhipster-uml.file_writer</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.jhipster-uml.file_writer.writeFile" id="apidoc.element.jhipster-uml.file_writer.writeFile">
+        function <span class="apidocSignatureSpan">jhipster-uml.file_writer.</span>writeFile
+        <span class="apidocSignatureSpan">(args)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function writeFile(args) {
+  fs.writeFileSync(args.fileName, args.content, null, '  ');
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.jhipster-uml.genmymodel_parser" id="apidoc.module.jhipster-uml.genmymodel_parser">module jhipster-uml.genmymodel_parser</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.jhipster-uml.genmymodel_parser.parse" id="apidoc.element.jhipster-uml.genmymodel_parser.parse">
+        function <span class="apidocSignatureSpan">jhipster-uml.genmymodel_parser.</span>parse
+        <span class="apidocSignatureSpan">(args)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function parse(args) {
+  initParser(args);
+  findElements();
+  fillTypes();
+  fillEnums();
+  fillAssociations();
+  fillClassesAndFields();
+  return parsedData;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+       exceptions.IllegalArgument,
+       'The entity to read from the files must be passed.');
+ }
+ var readFiles = {};
+ for (let i = 0; i &lt; entityNames.length; i++) {
+   let file = `.jhipster/${entityNames[i]}.json`;
+   if (fs.existsSync(file)) {
+     readFiles[entityNames[i]] = JSON.<span class="apidocCodeKeywordSpan">parse</span>(fs.readFileSync(file, 'utf8'));
+   }
+ }
+ return readFiles;
+}
+
+/**
+* Checks for reserved class name.
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.jhipster-uml.jdl_exporter" id="apidoc.module.jhipster-uml.jdl_exporter">module jhipster-uml.jdl_exporter</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.jhipster-uml.jdl_exporter.toJDL" id="apidoc.element.jhipster-uml.jdl_exporter.toJDL">
+        function <span class="apidocSignatureSpan">jhipster-uml.jdl_exporter.</span>toJDL
+        <span class="apidocSignatureSpan">(parsedData, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function toJDL(parsedData, options) {
+  if (!parsedData) {
+    throw new buildException(
+        exceptions.NullPointer,
+        'The parsed data must be passed');
+  }
+  var jdlObject = new JDLObject();
+  var jdlEntityObject = convertClasses(parsedData);
+  addEntitiesToJDLObject(jdlObject, jdlEntityObject);
+  var jdlRelationshipArray = convertAssociations(parsedData.associations, jdlObject.entities, parsedData.classes);
+  addRelationshipsToJDLObject(jdlObject, jdlRelationshipArray);
+  var jdlEnumArray = convertEnums(parsedData.enums);
+  addEnumsToJDLObject(jdlObject, jdlEnumArray);
+  if (options) {
+    var jdlOptionArray = convertOptions(options, parsedData.classNames.length);
+    addOptionsToJDLObject(jdlObject, jdlOptionArray);
+  }
+  return jdlObject;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.jhipster-uml.jdl_exporter.toJDLString" id="apidoc.element.jhipster-uml.jdl_exporter.toJDLString">
+        function <span class="apidocSignatureSpan">jhipster-uml.jdl_exporter.</span>toJDLString
+        <span class="apidocSignatureSpan">(parsedData, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function toJDLString(parsedData, options) {
+  return toJDL(parsedData, options).toString();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.jhipster-uml.jhipster_option_helper" id="apidoc.module.jhipster-uml.jhipster_option_helper">module jhipster-uml.jhipster_option_helper</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.jhipster-uml.jhipster_option_helper.askForAngularSuffixes" id="apidoc.element.jhipster-uml.jhipster_option_helper.askForAngularSuffixes">
+        function <span class="apidocSignatureSpan">jhipster-uml.jhipster_option_helper.</span>askForAngularSuffixes
+        <span class="apidocSignatureSpan">(classes, values)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function askForAngularSuffixes(classes, values) {
+  if (!(values instanceof Array)) {
+    values = [values];
+  }
+  var angularSuffixes = {};
+  for (let i = 0; i &lt; values.length; i++) {
+    let classesToSuffix = askForAngularSuffixesClasses(classes, values[i]);
+    if (classesToSuffix.length === 0) {
+      continue;
+    }
+    for (let j = 0; j &lt; classesToSuffix.length; j++) {
+      angularSuffixes[classesToSuffix[j]] = values[i];
+    }
+  }
+  return angularSuffixes;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.jhipster-uml.jhipster_option_helper.askForClassesToSkipClientCode" id="apidoc.element.jhipster-uml.jhipster_option_helper.askForClassesToSkipClientCode">
+        function <span class="apidocSignatureSpan">jhipster-uml.jhipster_option_helper.</span>askForClassesToSkipClientCode
+        <span class="apidocSignatureSpan">(classes)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function askForClassesToSkipClientCode(classes) {
+  return QuestionAsker.selectMultipleChoices({
+    classes: classes,
+    question: "Please choose the entities that won't have any client code:"
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.jhipster-uml.jhipster_option_helper.askForClassesToSkipServerCode" id="apidoc.element.jhipster-uml.jhipster_option_helper.askForClassesToSkipServerCode">
+        function <span class="apidocSignatureSpan">jhipster-uml.jhipster_option_helper.</span>askForClassesToSkipServerCode
+        <span class="apidocSignatureSpan">(classes)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function askForClassesToSkipServerCode(classes) {
+  return QuestionAsker.selectMultipleChoices({
+    classes: classes,
+    question: "Please choose the entities that won't have any server code:"
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.jhipster-uml.jhipster_option_helper.askForClassesWithNoFluentMethods" id="apidoc.element.jhipster-uml.jhipster_option_helper.askForClassesWithNoFluentMethods">
+        function <span class="apidocSignatureSpan">jhipster-uml.jhipster_option_helper.</span>askForClassesWithNoFluentMethods
+        <span class="apidocSignatureSpan">(classes)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function askForClassesWithNoFluentMethods(classes) {
+  return QuestionAsker.selectMultipleChoices({
+    classes: classes,
+    question: "Please choose the entities that won't have any fluent methods:"
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.jhipster-uml.jhipster_option_helper.askForDTO" id="apidoc.element.jhipster-uml.jhipster_option_helper.askForDTO">
+        function <span class="apidocSignatureSpan">jhipster-uml.jhipster_option_helper.</span>askForDTO
+        <span class="apidocSignatureSpan">(classes, values)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function askForDTO(classes, values) {
+  if (!(values instanceof Array)) {
+    values = [values];
+  }
+  var listDto = {};
+  for (let i = 0; i &lt; values.length; i++) {
+    let classesToDto = askForClassesToDto(classes, values[i]);
+    if (classesToDto.length === 0) {
+      continue;
+    }
+    for (let j = 0; j &lt; classesToDto.length; j++) {
+      listDto[classesToDto[j]] = values[i];
+    }
+  }
+  return listDto;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.jhipster-uml.jhipster_option_helper.askForMicroserviceNames" id="apidoc.element.jhipster-uml.jhipster_option_helper.askForMicroserviceNames">
+        function <span class="apidocSignatureSpan">jhipster-uml.jhipster_option_helper.</span>askForMicroserviceNames
+        <span class="apidocSignatureSpan">(classes, values)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function askForMicroserviceNames(classes, values) {
+  if (!(values instanceof Array)) {
+    values = [values];
+  }
+  var microserviceNames = {};
+  for (let i = 0; i &lt; values.length; i++) {
+    let classesToTreat = askForMicroserviceNamesClasses(classes, values[i]);
+    if (classesToTreat.length === 0) {
+      continue;
+    }
+    for (let j = 0; j &lt; classesToTreat.length; j++) {
+      microserviceNames[classesToTreat[j]] = values[i];
+    }
+  }
+  return microserviceNames;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.jhipster-uml.jhipster_option_helper.askForPagination" id="apidoc.element.jhipster-uml.jhipster_option_helper.askForPagination">
+        function <span class="apidocSignatureSpan">jhipster-uml.jhipster_option_helper.</span>askForPagination
+        <span class="apidocSignatureSpan">(classes, values)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function askForPagination(classes, values) {
+  if (!(values instanceof Array)) {
+    values = [values];
+  }
+  var listPagination = {};
+  for (let i = 0; i &lt; values.length; i++) {
+    let classesToPaginate = askForClassesToPaginate(classes, values[i]);
+    if (classesToPaginate.length === 0) {
+      continue;
+    }
+    for (let j = 0; j &lt; classesToPaginate.length; j++) {
+      listPagination[classesToPaginate[j]] = values[i];
+    }
+  }
+  return listPagination;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.jhipster-uml.jhipster_option_helper.askForSearchEngines" id="apidoc.element.jhipster-uml.jhipster_option_helper.askForSearchEngines">
+        function <span class="apidocSignatureSpan">jhipster-uml.jhipster_option_helper.</span>askForSearchEngines
+        <span class="apidocSignatureSpan">(classes, values)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function askForSearchEngines(classes, values) {
+  if (!(values instanceof Array)) {
+    values = [values];
+  }
+  var listSearchEngine = {};
+  for (let i = 0; i &lt; values.length; i++) {
+    let classesToSearch = askForClassesToBeSearched(classes, values[i]);
+    if (classesToSearch.length === 0) {
+      continue;
+    }
+    for (let j = 0; j &lt; classesToSearch.length; j++) {
+      listSearchEngine[classesToSearch[j]] = values[i];
+    }
+  }
+  return listSearchEngine;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.jhipster-uml.jhipster_option_helper.askForService" id="apidoc.element.jhipster-uml.jhipster_option_helper.askForService">
+        function <span class="apidocSignatureSpan">jhipster-uml.jhipster_option_helper.</span>askForService
+        <span class="apidocSignatureSpan">(classes, values)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function askForService(classes, values) {
+  if (!(values instanceof Array)) {
+    values = [values];
+  }
+  var listService = {};
+  for (let i = 0; i &lt; values.length; i++) {
+    let classesToService = askForClassesToService(classes, values[i]);
+    if (classesToService.length === 0) {
+      continue;
+    }
+    for (let j = 0; j &lt; classesToService.length; j++) {
+      listService[classesToService[j]] = values[i];
+    }
+  }
+  return listService;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.jhipster-uml.jhipster_uml_utils" id="apidoc.module.jhipster-uml.jhipster_uml_utils">module jhipster-uml.jhipster_uml_utils</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.jhipster-uml.jhipster_uml_utils.isJumlFilePresent" id="apidoc.element.jhipster-uml.jhipster_uml_utils.isJumlFilePresent">
+        function <span class="apidocSignatureSpan">jhipster-uml.jhipster_uml_utils.</span>isJumlFilePresent
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function isJumlFilePresent() {
+  try {
+    fs.statSync('.juml').isFile();
+    return true;
+  } catch (error) {
+    return false;
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.jhipster-uml.jhipster_utils" id="apidoc.module.jhipster-uml.jhipster_utils">module jhipster-uml.jhipster_utils</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.jhipster-uml.jhipster_utils.checkForReservedClassName" id="apidoc.element.jhipster-uml.jhipster_utils.checkForReservedClassName">
+        function <span class="apidocSignatureSpan">jhipster-uml.jhipster_utils.</span>checkForReservedClassName
+        <span class="apidocSignatureSpan">(args)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function checkForReservedClassName(args) {
+  if (!args) {
+    return;
+  }
+  if (isReservedClassName(args.name)) {
+    if (args.shouldThrow) {
+      throw new buildException(
+          exceptions.IllegalName,
+          `The passed class name '${args.name}' is reserved.`);
+    } else {
+      console.warn(
+          chalk.yellow(
+              `The passed class name '${args.name}' is reserved .`));
+    }
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.jhipster-uml.jhipster_utils.checkForReservedFieldName" id="apidoc.element.jhipster-uml.jhipster_utils.checkForReservedFieldName">
+        function <span class="apidocSignatureSpan">jhipster-uml.jhipster_utils.</span>checkForReservedFieldName
+        <span class="apidocSignatureSpan">(args)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function checkForReservedFieldName(args) {
+  if (!args) {
+    return;
+  }
+  if (args.databaseTypeName) {
+    checkFieldName(args.name, args.databaseTypeName, args.shouldThrow);
+  } else {
+    for (let i = 0, types = Object.keys(DatabaseTypes); i &lt; types.length; i++) {
+      checkFieldName(args.name, DatabaseTypes[types[i]], args.shouldThrow);
+    }
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.jhipster-uml.jhipster_utils.checkForReservedTableName" id="apidoc.element.jhipster-uml.jhipster_utils.checkForReservedTableName">
+        function <span class="apidocSignatureSpan">jhipster-uml.jhipster_utils.</span>checkForReservedTableName
+        <span class="apidocSignatureSpan">(args)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function checkForReservedTableName(args) {
+  if (!args) {
+    return;
+  }
+  if (args.databaseTypeName) {
+    checkTableName(args.name, args.databaseTypeName, args.shouldThrow);
+  } else {
+    for (let i = 0, types = Object.keys(DatabaseTypes); i &lt; types.length; i++) {
+      checkTableName(args.name, DatabaseTypes[types[i]], args.shouldThrow);
+    }
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.jhipster-uml.jhipster_utils.isYoRcFilePresent" id="apidoc.element.jhipster-uml.jhipster_utils.isYoRcFilePresent">
+        function <span class="apidocSignatureSpan">jhipster-uml.jhipster_utils.</span>isYoRcFilePresent
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function isYoRcFilePresent() {
+  try {
+    fs.statSync('./.yo-rc.json').isFile();
+    return true;
+  } catch (error) {
+    return false;
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.jhipster-uml.jhipster_utils.readJSONFiles" id="apidoc.element.jhipster-uml.jhipster_utils.readJSONFiles">
+        function <span class="apidocSignatureSpan">jhipster-uml.jhipster_utils.</span>readJSONFiles
+        <span class="apidocSignatureSpan">(entityNames)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function readJSONFiles(entityNames) {
+  if (!entityNames) {
+    throw new buildException(
+        exceptions.IllegalArgument,
+        'The entity to read from the files must be passed.');
+  }
+  var readFiles = {};
+  for (let i = 0; i &lt; entityNames.length; i++) {
+    let file = `.jhipster/${entityNames[i]}.json`;
+    if (fs.existsSync(file)) {
+      readFiles[entityNames[i]] = JSON.parse(fs.readFileSync(file, 'utf8'));
+    }
+  }
+  return readFiles;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.jhipster-uml.json_exporter" id="apidoc.module.jhipster-uml.json_exporter">module jhipster-uml.json_exporter</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.jhipster-uml.json_exporter.exportToJSON" id="apidoc.element.jhipster-uml.json_exporter.exportToJSON">
+        function <span class="apidocSignatureSpan">jhipster-uml.json_exporter.</span>exportToJSON
+        <span class="apidocSignatureSpan">(entities, entityIdsToGenerate, parsedData, entityNamesToGenerate)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function exportToJSON(entities, entityIdsToGenerate, parsedData, entityNamesToGenerate) {
+  if (!entities || ! entityIdsToGenerate || !parsedData) {
+    throw new buildException(
+        exceptions.NullPointer,
+        'Entities have to be passed to be exported.');
+  }
+  createJHipsterJSONFolder();
+  for (let i = 0, entityIds = Object.keys(entities); i &lt; entityIds.length; i++) {
+    if (entityNamesToGenerate.indexOf(parsedData.getClass(entityIds[i]).name) === -1) {
+      continue;
+    }
+    let file = `.jhipster/${parsedData.getClass(entityIds[i]).name}.json`;
+    fs.writeFileSync(file, JSON.stringify(entities[entityIds[i]], null, '  '));
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.jhipster-uml.modelio_parser" id="apidoc.module.jhipster-uml.modelio_parser">module jhipster-uml.modelio_parser</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.jhipster-uml.modelio_parser.parse" id="apidoc.element.jhipster-uml.modelio_parser.parse">
+        function <span class="apidocSignatureSpan">jhipster-uml.modelio_parser.</span>parse
+        <span class="apidocSignatureSpan">(args)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function parse(args) {
+  initParser(args);
+  findElements();
+  fillTypes();
+  fillEnums();
+  fillAssociations();
+  fillClassesAndFields();
+  fillConstraints();
+  return parsedData;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+       exceptions.IllegalArgument,
+       'The entity to read from the files must be passed.');
+ }
+ var readFiles = {};
+ for (let i = 0; i &lt; entityNames.length; i++) {
+   let file = `.jhipster/${entityNames[i]}.json`;
+   if (fs.existsSync(file)) {
+     readFiles[entityNames[i]] = JSON.<span class="apidocCodeKeywordSpan">parse</span>(fs.readFileSync(file, 'utf8'));
+   }
+ }
+ return readFiles;
+}
+
+/**
+* Checks for reserved class name.
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.jhipster-uml.mongodb_types" id="apidoc.module.jhipster-uml.mongodb_types">module jhipster-uml.mongodb_types</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.jhipster-uml.mongodb_types.mongodb_types" id="apidoc.element.jhipster-uml.mongodb_types.mongodb_types">
+        function <span class="apidocSignatureSpan">jhipster-uml.</span>mongodb_types
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">mongodb_types = function () {
+  this.types = {
+    String: ['required', 'minlength', 'maxlength', 'pattern'],
+    Integer: ['required', 'min', 'max'],
+    Long: ['required', 'min', 'max'],
+    BigDecimal: ['required', 'min', 'max'],
+    LocalDate: ['required'],
+    ZonedDateTime: ['required'],
+    Boolean: ['required'],
+    Enum: ['required'],
+    Blob: ['required', 'minbytes', 'maxbytes'],
+    AnyBlob: ['required', 'minbytes', 'maxbytes'],
+    ImageBlob: ['required', 'minbytes', 'maxbytes'],
+    TextBlob: ['required', 'minbytes', 'maxbytes'],
+    Float: ['required', 'min', 'max'],
+    Double: ['required', 'min', 'max']
+  };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.jhipster-uml.mongodb_types.prototype" id="apidoc.module.jhipster-uml.mongodb_types.prototype">module jhipster-uml.mongodb_types.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.jhipster-uml.mongodb_types.prototype.constructor" id="apidoc.element.jhipster-uml.mongodb_types.prototype.constructor">
+        function <span class="apidocSignatureSpan">jhipster-uml.mongodb_types.prototype.</span>constructor
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">constructor = function () {
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.jhipster-uml.mongodb_types.prototype.getName" id="apidoc.element.jhipster-uml.mongodb_types.prototype.getName">
+        function <span class="apidocSignatureSpan">jhipster-uml.mongodb_types.prototype.</span>getName
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getName = function () {
+  return mongodb;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  name: classData.name,
+  shouldThrow: true
+});
+if (classData.tableName.toLowerCase() !== 'user'
+    || (classData.tableName.toLowerCase() === 'user' &amp;&amp; !noUserManagement)) {
+  checkForReservedTableName({
+    name: classData.tableName,
+    databaseTypeName: databaseTypes.<span class="apidocCodeKeywordSpan">getName</span>(),
+    shouldThrow: true
+  });
+}
+if (element.eAnnotations &amp;&amp; element.eAnnotations[0].details
+    &amp;&amp; element.eAnnotations[0].details.length &gt; 1
+    &amp;&amp; element.eAnnotations[0].details[1].$.key === 'gmm-documentation') {
+  classData.comment = element.eAnnotations[0].details[1].$.value;
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.jhipster-uml.object_helper" id="apidoc.module.jhipster-uml.object_helper">module jhipster-uml.object_helper</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.jhipster-uml.object_helper.areJHipsterEntitiesEqual" id="apidoc.element.jhipster-uml.object_helper.areJHipsterEntitiesEqual">
+        function <span class="apidocSignatureSpan">jhipster-uml.object_helper.</span>areJHipsterEntitiesEqual
+        <span class="apidocSignatureSpan">(firstEntity, secondEntity)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function areJHipsterEntitiesEqual(firstEntity, secondEntity) {
+  if (!firstEntity || !secondEntity) {
+    throw new buildException(exceptions.NullPointer, "The objects to compare can't be nil.");
+  }
+  return areFieldsEqual(firstEntity.fields, secondEntity.fields)
+      &amp;&amp; areRelationshipsEqual(firstEntity.relationships, secondEntity.relationships)
+      &amp;&amp; areOptionsEqual(firstEntity, secondEntity);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.jhipster-uml.object_utils" id="apidoc.module.jhipster-uml.object_utils">module jhipster-uml.object_utils</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.jhipster-uml.object_utils.merge" id="apidoc.element.jhipster-uml.object_utils.merge">
+        function <span class="apidocSignatureSpan">jhipster-uml.object_utils.</span>merge
+        <span class="apidocSignatureSpan">(object1, object2)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function merge(object1, object2) {
+  if (!object1 || Object.keys(object1).length === 0) {
+    return object2;
+  }
+  if (!object2 || Object.keys(object2).length === 0) {
+    return object1;
+  }
+  var merged = {};
+  for (let key in object1) {
+    merged[key] = object1[key];
+  }
+  for (let key in object2) {
+    merged[key] = object2[key];
+  }
+  return merged;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+module.exports = {
+merge: merge,
+values: values
+};
+
+/**
+ * Merge two objects.
+ * The order is important here: o1.<span class="apidocCodeKeywordSpan">merge</span>(o2) means that the keys values of o2
+ * will replace those identical to o1.
+ * The keys that don't belong to the other object will be added.
+ * @param object2 the object to be merged with.
+ * @returns {Object} the object result of the merge
+ */
+function merge(object1, object2) {
+if (!object1 || Object.keys(object1).length === 0) {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.jhipster-uml.object_utils.values" id="apidoc.element.jhipster-uml.object_utils.values">
+        function <span class="apidocSignatureSpan">jhipster-uml.object_utils.</span>values
+        <span class="apidocSignatureSpan">(object)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function values(object) {
+  if (object == null) {
+    throw new buildException(exceptions.NullPointer, 'The passed object must not be nil.');
+  }
+  var values = [];
+  for (let i = 0, keys = Object.keys(object); i &lt; keys.length; i++) {
+    values.push(object[keys[i]]);
+  }
+  return values;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.jhipster-uml.parser_factory" id="apidoc.module.jhipster-uml.parser_factory">module jhipster-uml.parser_factory</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.jhipster-uml.parser_factory.createParser" id="apidoc.element.jhipster-uml.parser_factory.createParser">
+        function <span class="apidocSignatureSpan">jhipster-uml.parser_factory.</span>createParser
+        <span class="apidocSignatureSpan">(args)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function createParser(args) {
+  if (!args || !args.file || !args.databaseType) {
+    throw new buildException(
+        exceptions.IllegalArgument,
+        'The file and the database type must be passed');
+  }
+  var types = initDatabaseTypeHolder(args.databaseType);
+  return getParserForSingleFile(args.file, types, args.noUserManagement);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.jhipster-uml.parser_helper" id="apidoc.module.jhipster-uml.parser_helper">module jhipster-uml.parser_helper</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.jhipster-uml.parser_helper.extractClassName" id="apidoc.element.jhipster-uml.parser_helper.extractClassName">
+        function <span class="apidocSignatureSpan">jhipster-uml.parser_helper.</span>extractClassName
+        <span class="apidocSignatureSpan">(name)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function extractClassName(name) {
+  if (name.indexOf('(') === -1) {
+    return { entityName: name, tableName: _.snakeCase(name).toLowerCase() };
+  }
+  var split = name.split('(');
+  return {
+    entityName: split[0].trim(),
+    tableName: _.snakeCase(
+      split[1].slice(0, split[1].length - 1).trim()
+    ).toLowerCase()
+  };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+function checkForUserClass(element) {
+if (!parsedData.userClassId &amp;&amp; element.$.name.toLowerCase() === 'user') {
+  parsedData.userClassId = element.$['xmi:id'];
+}
+}
+
+function addClass(element) {
+var names = parser_helper.<span class="apidocCodeKeywordSpan">extractClassName</span>(element.$.name);
+var classData = {
+  name: _.upperFirst(names.entityName),
+  tableName: names.tableName
+};
+checkForReservedClassName({
+  name: classData.name,
+  shouldThrow: true
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.jhipster-uml.parser_helper.getTypeNameFromURL" id="apidoc.element.jhipster-uml.parser_helper.getTypeNameFromURL">
+        function <span class="apidocSignatureSpan">jhipster-uml.parser_helper.</span>getTypeNameFromURL
+        <span class="apidocSignatureSpan">(uri)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function getTypeNameFromURL(uri) {
+  return /\W([A-z]*)$/.exec(uri)[1];
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  fieldData.type = element.$.type;
+} else if (!element.type) {
+  throw new buildException(
+      exceptions.WrongField,
+      `The field '${element.$.name}' does not possess any type.`);
+} else {
+  var typeName =
+      _.upperFirst(parser_helper.<span class="apidocCodeKeywordSpan">getTypeNameFromURL</span>(element.type[0].$.href));
+  addType(typeName, typeName); // id = name
+  fieldData.type = typeName;
+}
+
+if (element.eAnnotations &amp;&amp; element.eAnnotations[0].details
+    &amp;&amp; element.eAnnotations[0].details.length &gt; 1
+    &amp;&amp; element.eAnnotations[0].details[1].$.key === 'gmm-documentation') {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.jhipster-uml.parser_helper.getXmlElementFromRawIndexes" id="apidoc.element.jhipster-uml.parser_helper.getXmlElementFromRawIndexes">
+        function <span class="apidocSignatureSpan">jhipster-uml.parser_helper.</span>getXmlElementFromRawIndexes
+        <span class="apidocSignatureSpan">(root, indexInfo)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function getXmlElementFromRawIndexes(root, indexInfo) {
+  var parentPackage = root;
+  for (let j = 0; j &lt; indexInfo.path.length; j++) {
+    parentPackage = parentPackage.packagedElement[indexInfo.path[j]];
+  }
+  return parentPackage.packagedElement[indexInfo.index];
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  default:
+  }
+}
+}
+
+function fillTypes() {
+for (let i = 0; i &lt; rawObjects.rawTypesIndexes.length; i++) {
+  addType(parser_helper.<span class="apidocCodeKeywordSpan">getXmlElementFromRawIndexes</span>(root, rawObjects.rawTypesIndexes[
+i]));
+}
+}
+
+function addType(typeElement) {
+if (!typeElement.$) {
+  typeElement = {
+    $: {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.jhipster-uml.parser_helper.isAnId" id="apidoc.element.jhipster-uml.parser_helper.isAnId">
+        function <span class="apidocSignatureSpan">jhipster-uml.parser_helper.</span>isAnId
+        <span class="apidocSignatureSpan">(name)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function isAnId(name) {
+  return /^id$/.test(name.toLowerCase());
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+for (let i = 0; i &lt; element.ownedAttribute.length; i++) {
+  let attribute = element.ownedAttribute[i];
+  if (!attribute.$.name) {
+    throw new buildException(
+        exceptions.NullPointer,
+        `No name is defined for the passed attribute, for class '${element.$.name}'.`);
+  }
+  if (!parser_helper.<span class="apidocCodeKeywordSpan">isAnId</span>(attribute.$.name)) {
+    addField(attribute, element.$['xmi:id']);
+  }
+}
+}
+
+function addField(element, classId) {
+addRegularField(element, classId);
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.jhipster-uml.question_asker" id="apidoc.module.jhipster-uml.question_asker">module jhipster-uml.question_asker</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.jhipster-uml.question_asker.askConfirmation" id="apidoc.element.jhipster-uml.question_asker.askConfirmation">
+        function <span class="apidocSignatureSpan">jhipster-uml.question_asker.</span>askConfirmation
+        <span class="apidocSignatureSpan">(args)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function askConfirmation(args) {
+  var userAnswer = 'no-answer';
+  var merged = merge(DEFAULTS.CONFIRMATIONS, args);
+  inquirer.prompt([
+    {
+      type: DEFAULTS.QUESTION_TYPES.CONFIRM,
+      name: 'choice',
+      message: merged.question,
+      'default': merged.defaultValue
+    }
+  ]
+  ).then(function (answer) {
+    userAnswer = answer.choice;
+  });
+  while (userAnswer === 'no-answer') {
+    wait(100);
+  }
+  return userAnswer;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.jhipster-uml.question_asker.askForInput" id="apidoc.element.jhipster-uml.question_asker.askForInput">
+        function <span class="apidocSignatureSpan">jhipster-uml.question_asker.</span>askForInput
+        <span class="apidocSignatureSpan">(args)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function askForInput(args) {
+  var userAnswer = null;
+  var merged = merge(DEFAULTS.INPUT, args);
+  inquirer.prompt([
+    {
+      type: DEFAULTS.QUESTION_TYPES.INPUT,
+      name: 'value',
+      message: merged.question,
+      validate: function(value) {
+        var pass = value.match(/^[A-z0-9-_]+$/);
+        if (pass) {
+          return true;
+        }
+        return "The passed value is invalid, only alphabetical characters, '-' and '_' are allowed.";
+      }
+    }
+  ]
+  ).then(function (answer) {
+    userAnswer = answer.value;
+  });
+  while (!userAnswer) {
+    wait(100);
+  }
+  return userAnswer;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.jhipster-uml.question_asker.selectMultipleChoices" id="apidoc.element.jhipster-uml.question_asker.selectMultipleChoices">
+        function <span class="apidocSignatureSpan">jhipster-uml.question_asker.</span>selectMultipleChoices
+        <span class="apidocSignatureSpan">(args)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function selectMultipleChoices(args) {
+  args.choices = args.choices || prepareChoices(args.classes);
+  var merged = merge(DEFAULTS.MULTIPLE_CHOICES, args);
+  var result = null;
+  inquirer.prompt([
+    {
+      type: DEFAULTS.QUESTION_TYPES.CHECKBOX,
+      name: 'answer',
+      message: merged.question,
+      choices: merged.choices,
+      filter: merged.filterFunction
+    }
+  ]).then(function(answers) {
+    if (answers.answer.toString().length === 0) {
+      result = DEFAULTS.NOTHING;
+    } else {
+      result = answers.answer;
+    }
+  });
+  while (!result) {
+    wait(100);
+  }
+  return result;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+askForAngularSuffixes: askForAngularSuffixes,
+askForMicroserviceNames: askForMicroserviceNames,
+askForSearchEngines: askForSearchEngines,
+askForClassesWithNoFluentMethods: askForClassesWithNoFluentMethods
+};
+
+function askForClassesToPaginate(classes, value) {
+return QuestionAsker.<span class="apidocCodeKeywordSpan">selectMultipleChoices</span>({
+  classes: classes,
+  question: `Please choose the entities you want to paginate with ${value}:`
+});
+}
+
+function askForPagination(classes, values) {
+if (!(values instanceof Array)) {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.jhipster-uml.question_asker.selectSingleChoice" id="apidoc.element.jhipster-uml.question_asker.selectSingleChoice">
+        function <span class="apidocSignatureSpan">jhipster-uml.question_asker.</span>selectSingleChoice
+        <span class="apidocSignatureSpan">(args)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function selectSingleChoice(args) {
+  args.choices = args.choices || prepareChoices(args.classes);
+  var merged = merge(DEFAULTS.SINGLE_CHOICES, args);
+  var result = null;
+  inquirer.prompt([
+    {
+      type: DEFAULTS.QUESTION_TYPES.LIST,
+      name: 'answer',
+      message: merged.question,
+      choices: merged.choices,
+      filter: merged.filterFunction
+    }
+  ]).then(function(answers) {
+    result = answers.answer;
+  });
+  while (!result) {
+    wait(100);
+  }
+  return result;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.jhipster-uml.sql_types" id="apidoc.module.jhipster-uml.sql_types">module jhipster-uml.sql_types</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.jhipster-uml.sql_types.sql_types" id="apidoc.element.jhipster-uml.sql_types.sql_types">
+        function <span class="apidocSignatureSpan">jhipster-uml.</span>sql_types
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">sql_types = function () {
+  this.types = {
+    String: ['required', 'minlength', 'maxlength', 'pattern'],
+    Integer: ['required', 'min', 'max'],
+    Long: ['required', 'min', 'max'],
+    BigDecimal: ['required', 'min', 'max'],
+    LocalDate: ['required'],
+    ZonedDateTime: ['required'],
+    Boolean: ['required'],
+    Enum: ['required'],
+    Blob: ['required', 'minbytes', 'maxbytes'],
+    AnyBlob: ['required', 'minbytes', 'maxbytes'],
+    ImageBlob: ['required', 'minbytes', 'maxbytes'],
+    TextBlob: ['required', 'minbytes', 'maxbytes'],
+    Float: ['required', 'min', 'max'],
+    Double: ['required', 'min', 'max']
+  };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.jhipster-uml.sql_types.prototype" id="apidoc.module.jhipster-uml.sql_types.prototype">module jhipster-uml.sql_types.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.jhipster-uml.sql_types.prototype.constructor" id="apidoc.element.jhipster-uml.sql_types.prototype.constructor">
+        function <span class="apidocSignatureSpan">jhipster-uml.sql_types.prototype.</span>constructor
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">constructor = function () {
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.jhipster-uml.sql_types.prototype.getName" id="apidoc.element.jhipster-uml.sql_types.prototype.getName">
+        function <span class="apidocSignatureSpan">jhipster-uml.sql_types.prototype.</span>getName
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getName = function () {
+  return sql;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  name: classData.name,
+  shouldThrow: true
+});
+if (classData.tableName.toLowerCase() !== 'user'
+    || (classData.tableName.toLowerCase() === 'user' &amp;&amp; !noUserManagement)) {
+  checkForReservedTableName({
+    name: classData.tableName,
+    databaseTypeName: databaseTypes.<span class="apidocCodeKeywordSpan">getName</span>(),
+    shouldThrow: true
+  });
+}
+if (element.eAnnotations &amp;&amp; element.eAnnotations[0].details
+    &amp;&amp; element.eAnnotations[0].details.length &gt; 1
+    &amp;&amp; element.eAnnotations[0].details[1].$.key === 'gmm-documentation') {
+  classData.comment = element.eAnnotations[0].details[1].$.value;
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.jhipster-uml.types" id="apidoc.module.jhipster-uml.types">module jhipster-uml.types</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.jhipster-uml.types.types" id="apidoc.element.jhipster-uml.types.types">
+        function <span class="apidocSignatureSpan">jhipster-uml.</span>types
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">types = function () {
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.jhipster-uml.types.prototype" id="apidoc.module.jhipster-uml.types.prototype">module jhipster-uml.types.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.jhipster-uml.types.prototype.contains" id="apidoc.element.jhipster-uml.types.prototype.contains">
+        function <span class="apidocSignatureSpan">jhipster-uml.types.prototype.</span>contains
+        <span class="apidocSignatureSpan">(type)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">contains = function (type) {
+  return this.getTypes().indexOf(type) !== -1;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    typeElement = {
+      $: {
+        'xmi:id': typeElement,
+        name: typeElement
+      }
+    };
+  }
+  if (!databaseTypes.<span class="apidocCodeKeywordSpan">contains</span>(_.upperFirst(typeElement.$.name))) {
+    throw new buildException(
+        exceptions.WrongType,
+        `The type '${typeElement.$.name}' isn't supported by JHipster.`);
+  }
+  parsedData.addType(typeElement.$['xmi:id'], {name: _.upperFirst(typeElement.$.name)});
+}
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.jhipster-uml.types.prototype.getName" id="apidoc.element.jhipster-uml.types.prototype.getName">
+        function <span class="apidocSignatureSpan">jhipster-uml.types.prototype.</span>getName
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getName = function () {
+  throw new buildException(
+      exceptions.UnimplementedOperation,
+      'This method must be implemented by a subclass to be called.');
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  name: classData.name,
+  shouldThrow: true
+});
+if (classData.tableName.toLowerCase() !== 'user'
+    || (classData.tableName.toLowerCase() === 'user' &amp;&amp; !noUserManagement)) {
+  checkForReservedTableName({
+    name: classData.tableName,
+    databaseTypeName: databaseTypes.<span class="apidocCodeKeywordSpan">getName</span>(),
+    shouldThrow: true
+  });
+}
+if (element.eAnnotations &amp;&amp; element.eAnnotations[0].details
+    &amp;&amp; element.eAnnotations[0].details.length &gt; 1
+    &amp;&amp; element.eAnnotations[0].details[1].$.key === 'gmm-documentation') {
+  classData.comment = element.eAnnotations[0].details[1].$.value;
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.jhipster-uml.types.prototype.getTypes" id="apidoc.element.jhipster-uml.types.prototype.getTypes">
+        function <span class="apidocSignatureSpan">jhipster-uml.types.prototype.</span>getTypes
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getTypes = function () {
+  throw new buildException(
+      exceptions.UnimplementedOperation,
+      'This method must be implemented by a subclass to be called.');
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+ * Each element is an Object which has a name, and a value.
+ * By default, the name and the value keys have the same value:
+ * [ { name: '1', value: '1' }, { name: '2', value: '2' }, ... ]
+ * @return {Array} the new array.
+ */
+Types.prototype.toValueNameObjectArray = function () {
+var array = [];
+for (let key in this.<span class="apidocCodeKeywordSpan">getTypes</span>()) {
+  if (this.getTypes().hasOwnProperty(key)) {
+    let object = {
+      value: this.getTypes()[key],
+      name: this.getTypes()[key]
+    };
+    array.push(object);
+  }
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.jhipster-uml.types.prototype.getValidationsForType" id="apidoc.element.jhipster-uml.types.prototype.getValidationsForType">
+        function <span class="apidocSignatureSpan">jhipster-uml.types.prototype.</span>getValidationsForType
+        <span class="apidocSignatureSpan">(type)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getValidationsForType = function (type) {
+  throw new buildException(
+      exceptions.UnimplementedOperation,
+      'This method must be implemented by a subclass to be called.');
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+ * Checks whether the type possesses the also passed validation.
+ * @param type {string} the type.
+ * @param validation {string} the validation to check.
+ * @return {boolean} whether the type is validated by the validation.
+ * @throws NoElementFoundException if no type exists for the passed type.
+ */
+Types.prototype.isValidationSupportedForType = function (type, validation) {
+  return this.<span class="apidocCodeKeywordSpan">getValidationsForType</span>(type).indexOf(validation) !== -1;
+};
+
+Types.prototype.getName = function () {
+  throw new buildException(
+      exceptions.UnimplementedOperation,
+      'This method must be implemented by a subclass to be called.');
+};
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.jhipster-uml.types.prototype.isValidationSupportedForType" id="apidoc.element.jhipster-uml.types.prototype.isValidationSupportedForType">
+        function <span class="apidocSignatureSpan">jhipster-uml.types.prototype.</span>isValidationSupportedForType
+        <span class="apidocSignatureSpan">(type, validation)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">isValidationSupportedForType = function (type, validation) {
+  return this.getValidationsForType(type).indexOf(validation) !== -1;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  throw new buildException(
+      exceptions.WrongValidation, 'The validation has no name.');
+}
+var name = constraintElement.$.name;
+var type = parsedData.getType(parsedData.getField(constraintElement.$.constrainedElement).type);
+var enumType = parsedData.getEnum(parsedData.getField(constraintElement.$.constrainedElement).type);
+
+if ((type &amp;&amp; !databaseTypes.<span class="apidocCodeKeywordSpan">isValidationSupportedForType</span>(type.name, name))
+    || (enumType &amp;&amp; !databaseTypes.isValidationSupportedForType('Enum', name))) {
+  throw new buildException(
+      exceptions.WrongValidation,
+      `The validation '${name}' isn't supported for the type '`
+      + `${parsedData.getType(parsedData.getField(constraintElement.$.constrainedElement).type)}'.`);
+}
+// not nil, but ''
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.jhipster-uml.types.prototype.toValueNameObjectArray" id="apidoc.element.jhipster-uml.types.prototype.toValueNameObjectArray">
+        function <span class="apidocSignatureSpan">jhipster-uml.types.prototype.</span>toValueNameObjectArray
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">toValueNameObjectArray = function () {
+  var array = [];
+  for (let key in this.getTypes()) {
+    if (this.getTypes().hasOwnProperty(key)) {
+      let object = {
+        value: this.getTypes()[key],
+        name: this.getTypes()[key]
+      };
+      array.push(object);
+    }
+  }
+  return array;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.jhipster-uml.types_helper" id="apidoc.module.jhipster-uml.types_helper">module jhipster-uml.types_helper</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.jhipster-uml.types_helper.isNoSQL" id="apidoc.element.jhipster-uml.types_helper.isNoSQL">
+        function <span class="apidocSignatureSpan">jhipster-uml.types_helper.</span>isNoSQL
+        <span class="apidocSignatureSpan">(type)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function isNoSQL(type) {
+  return !SQLTypes.prototype.isPrototypeOf(type);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.jhipster-uml.umldesigner_parser" id="apidoc.module.jhipster-uml.umldesigner_parser">module jhipster-uml.umldesigner_parser</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.jhipster-uml.umldesigner_parser.parse" id="apidoc.element.jhipster-uml.umldesigner_parser.parse">
+        function <span class="apidocSignatureSpan">jhipster-uml.umldesigner_parser.</span>parse
+        <span class="apidocSignatureSpan">(args)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function parse(args) {
+  initParser(args);
+  findElements();
+  fillTypes();
+  fillEnums();
+  fillClassesAndFields();
+  fillAssociations();
+  return parsedData;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+       exceptions.IllegalArgument,
+       'The entity to read from the files must be passed.');
+ }
+ var readFiles = {};
+ for (let i = 0; i &lt; entityNames.length; i++) {
+   let file = `.jhipster/${entityNames[i]}.json`;
+   if (fs.existsSync(file)) {
+     readFiles[entityNames[i]] = JSON.<span class="apidocCodeKeywordSpan">parse</span>(fs.readFileSync(file, 'utf8'));
+   }
+ }
+ return readFiles;
+}
+
+/**
+* Checks for reserved class name.
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
+</body></html>
